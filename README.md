@@ -82,3 +82,7 @@ crypto-dashboard
 ## Autor
 
 Adonis Fajardo
+
+## Live Demo
+
+https://crypto-dashoboard-adonis-fajardo.streamlit.app/
