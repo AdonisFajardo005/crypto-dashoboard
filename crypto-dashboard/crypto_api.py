@@ -1,0 +1,23 @@
+import requests
+import pandas as pd
+
+def get_crypto_data(coin="bitcoin", days=30):
+
+    url = f"https://api.coingecko.com/api/v3/coins/{coin}/market_chart"
+
+    params = {
+        "vs_currency": "usd",
+        "days": days
+    }
+
+    response = requests.get(url, params=params)
+
+    data = response.json()
+
+    prices = data["prices"]
+
+    df = pd.DataFrame(prices, columns=["timestamp", "price"])
+
+    df["timestamp"] = pd.to_datetime(df["timestamp"], unit="ms")
+
+    return df
