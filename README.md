@@ -65,7 +65,7 @@ Instalar dependencias:
 
 Para ejecutar el dashboard:
 
-streamlit run app.py
+```streamlit run app.py```
 
 La aplicación se abrirá automáticamente en el navegador.
 
